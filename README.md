@@ -8,4 +8,4 @@ This is a small project for adding daily life todo
 [Live Link](https://todo-as.netlify.app/)
 
 # UI ScreenShot
-<img src="../../images/UI_Screenshot.PNG">
+<img src="./images/UI_Screenshot.PNG">
