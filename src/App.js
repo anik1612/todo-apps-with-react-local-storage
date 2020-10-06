@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import useLocalStorageState from 'use-local-storage-state/dist';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,6 +10,10 @@ function App() {
   const [todos, setTodos] = useLocalStorageState('todos', [])
   const [inpClr, setInpClr] = useState('')
   const { register, handleSubmit, errors } = useForm();
+
+  useEffect(() => {
+    setTodos(['Hi, there👋',])
+  }, [])
 
   const onSubmit = (data) => {
     setTodos([...todos, data.todo]);
@@ -28,7 +32,7 @@ function App() {
           {
             todos.map((todo, i) => (
               <div className='d-flex justify-content-between border-bottom mb-2'>
-                <div>
+                <div className='mr-1'>
                   <h4 key={i}>({i + 1}) {todo}</h4>
                 </div>
                 <div>
