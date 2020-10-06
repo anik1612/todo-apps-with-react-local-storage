@@ -8,12 +8,8 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   const [todos, setTodos] = useLocalStorageState('todos', [])
-  const [inpClr, setInpClr] = useState(' ')
+  const [inpClr, setInpClr] = useState('Enter todo')
   const { register, handleSubmit, errors } = useForm();
-
-  useEffect(() => {
-    setTodos(['Hi, there👋',])
-  }, [])
 
   const onSubmit = (data) => {
     setTodos([...todos, data.todo]);
