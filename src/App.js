@@ -8,7 +8,7 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   const [todos, setTodos] = useLocalStorageState('todos', [])
-  const [inpClr, setInpClr] = useState('')
+  const [inpClr, setInpClr] = useState(' ')
   const { register, handleSubmit, errors } = useForm();
 
   useEffect(() => {
