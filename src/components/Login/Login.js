@@ -9,7 +9,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 
 const Login = () => {
     // context api 
-    const [setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     // state for show error message to user
     const [error, setError] = useState('')
